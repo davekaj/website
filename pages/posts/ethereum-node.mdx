@@ -1,0 +1,121 @@
+---
+title: Running an Ethereum Node at Home (Nov 2021)
+date: 2021/11/13
+description: Learn how to run an Ethereum node with the Erigon Client
+tag: ethereum,infrastructure
+author: You
+---
+
+import Image from 'next/image'
+
+# Running an Ethereum Node at Home (Nov 2021)
+
+I recently set up an Ethereum Node with my custom-built desktop, and I'll explain the process I went through. This is an informational document that anyone can understand.
+
+When it comes to hardware, I am a hobbyist and therefore I have no choice but to explain it in simple terms! I set up this node so I can query it myself for smart contract development, as well as support the network by running a full node.
+
+Overall I was very happy with the simplicity of setting up an Ethereum Node. I remember running a node through [Mist](https://www.investopedia.com/terms/m/mist-browser.asp) back in 2016 on my shitty Dell laptop running Windows. I had absolutely no clue what was going on, could not debug it for the life of me, and it was really hard to understand what was happening. Needless to say, I had to delete the chain and give up very quickly.
+
+Here we are 5 years later, and I chose to run a node using the [Erigon client](https://github.com/ledgerwatch/erigon). It has received a lot of praise as of late, and people I know who run infrastructure recommended it. Note that Erigon is by default, an archive node, and this is the configuration I ran it with.
+
+## Recommended Specs
+
+The Erigon [recommended specs](https://github.com/ledgerwatch/erigon#system-requirements) are simply:
+
+- 2Tb storage space on a single partition: 1.3Tb state, 200GB temp files
+- RAM: 16GB, 64-bit architecture, [Golang version >= 1.16](https://go.dev/doc/install)
+
+## My Build
+
+The PC I am using was actually built in early 2020, only had a 500 GB drive, and ran a Bitcoin node for some time. So I decided to upgrade to a 2TB NVMe SSD. The main components are as follows:
+
+- CPU - [AMD Ryzen 5 2600 3.4 GHz 6-Core Processor](https://pcpartpicker.com/product/jLF48d/amd-ryzen-5-2600-34ghz-6-core-processor-yd2600bbafbox)
+- RAM - [32 GB (4 x 8) Corsair Vengeance LPX](https://pcpartpicker.com/product/MYH48d/corsair-memory-cmk16gx4m2b3000c15)
+- STORAGE - [Samsung 980 Pro 2 TB M.2–2280 NVME SSD](https://pcpartpicker.com/product/f3cRsY/samsung-980-pro-2-tb-m2-2280-nvme-solid-state-drive-mz-v8p2t0bam)
+
+You can see the full build [here](https://pcpartpicker.com/user/dkaj/saved/#view=THJshM).
+
+<Image
+  src="/images/desktop-comp.png"
+  alt="My Desktop Build"
+  layout="responsive"
+  height={600}
+  width={800}
+  priority
+/>
+
+<div className="caption">
+  Every single Ethereum transaction EVER is inside of this computer! Hundreds of
+  billions of dollars worth!
+</div>
+
+## Syncing Time
+
+I got the machine set up with Ubuntu 20.04 from a bootable USB. Then I installed Golang and ran the [commands to get Erigon running](https://github.com/ledgerwatch/erigon#getting-started).
+
+With my build and [Erigons syncing time estimations](https://github.com/ledgerwatch/erigon#how-much-ram-do-i-need), I was under the assumption it would take about 3 days to sync, as I had 32 GB of ram and an NVMe SSD. Here's how it played out:
+
+- **_October 31st, 8:30 pm_** - Start syncing the node.
+- **_November 5th, 7:30 pm_** - The node caught up to the chain header from which the fast sync started. This header was now 5 days behind the real network, so it still had some catching up to do.
+- **_November 6th, 4:00 am_** - It got to the front of the chain.
+
+In total, it took 5.33 days to sync. **And it took almost 1.8 TB of space!**
+
+<Image
+  src="/images/linux-screenshot.png"
+  alt="Terminal"
+  layout="responsive"
+  height={300}
+  width={900}
+/>
+
+<div className="caption">Fully Synced!</div>
+
+## Hardware Performance
+
+- [Erigons documentation](https://github.com/ledgerwatch/erigon/blob/devel/eth/stagedsync/README.md) explains that the bottleneck is writing to the SSD and I found this to be true. I had an NVMe SSD, and I would still estimate it took up ~70% of the syncing time.
+- The CPU had one stage where it was running above 90%. But this only lasted about 8 hours. The Ryzen CPU I have is quite modest, so there is no need to spend big here.
+- The 32 GB of RAM was more than enough. I rarely saw it go above 16 GB of usage during the sync, or while it is fully synced now.
+
+## Growth Rate of the Chain after Syncing
+
+This is the most important piece of information for anyone wanting to build an Ethereum Node. Here is the current situation:
+
+- To get to the chain header on November 6th it took 1.8 TB of space
+- _November 8th 8:00 am_ - I had 203.5 GB left of space.
+- _November 13th 8:00 am_- I had 175.3 GB left of space.
+- **This works out to about ~5.6 GB being written a day!**
+- It seems to vary between 4.5 GB to 6.5 GB a day.
+
+**If we do the math, my 2 TB drive only has about 31 days left until it maxes out!**
+
+This is a small disappointment, but it is something I could have avoided with a little bit of work. The Erigon instructions [were last updated 4 months ago](https://github.com/ledgerwatch/erigon/commit/b7c3c15fc8f2ad6085e3bf39597d81fc8cc0bada) and I could have checked this beforehand, or just asked around a bit more. With the growth rate at 5.6 GB a day, it is clear that 2 TB was probably a better estimation at the beginning of 2021.
+
+I could run the Erigon node in pruned mode, which would allow the 2 TB drive to last a lot longer. I haven't confirmed it, but I believe it takes around 500 GB of space, and it grows much slower than 5.6 GB. Running in pruned mode is perfectly fine. You should only run an archive node if you have an explicit reason for doing so.
+
+## Future Upgrades and Recommendations
+
+I want my node to last me 2 years before I need to upgrade it again. To estimate that, I need to assume the daily growth of the chain will go above 5.6 GB a day in the future. To keep it simple, let's say over the next 2 years it will average 7 GB a day.
+
+```
+2 years * 365 days * 7 GB / day = 5.1 TB
+5.1 TB + 1.8 TB = 6.9 TB total in 2 years
+```
+
+Clearly, I need an 8 TB drive.
+
+The [8 TB NVMe](https://pcpartpicker.com/product/qdPgXL/sabrent-rocket-q-8-tb-m2-2280-nvme-solid-state-drive-sb-rktq-8tb) drive I was interested in is $1300. I only have 1 M.2. NVMe slot on my motherboard, so I would have to remove my current drive. The reviews on this are pretty good, although it is not as high quality as Samsung NVME drives.
+
+I also checked out this [Samsung non-NVMe 8 TB SSD](https://pcpartpicker.com/product/7Qvqqs/samsung-870-qvo-8-tb-25-solid-state-drive-mz-77q8t0bam). It's $700, but it will take longer to sync. I read online that the quality is poor. It will be in high use for 2 years, so I decided not to buy it, as it would be slow, and might even fail before 2 years is up.
+
+My conclusion is that I should just stick with an 8 TB NVME drive. The one I posted is the best I could find that balances price and size.
+
+## Conclusion
+
+I enjoyed the process a lot, and it feels great to be able to run a node and support the network. I would recommend anyone to build a machine with similar specs if they want to run Erigon in pruned mode. Other clients, such as geth, can be used in pruned mode as well.
+
+For an archive node, I recommend Erigon since it is much lower in space than other clients in archive mode. And I would upgrade to an 8 TB SSD, as I believe Erigon will be closing in on 4 TB by the end of 2022.
+
+## December 2021 Update
+
+_The 2 TB SSD did indeed max out. It took about 20 days, less than the 31 I estimated. My plan is to downgrade the node to a pruned node and run it. If I need an archive node I will buy an 8 TB NVMEe drive. If I am lucky, higher-quality drives may be available by that time._

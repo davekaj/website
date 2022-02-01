@@ -63,3 +63,10 @@ img.next-image {
 .nav-line .nav-link {
   color: #69778c;
 }
+
+.caption {
+  font-size: 90%;
+  text-align: center;
+  font-style: italic;
+  color: rgb(112, 112, 112);
+}
