@@ -1,6 +1,13 @@
+# Personal Website
+
+This is a simple personal website built with **Next.js** and [Nextra](https://nextra.vercel.app/). It is based on [this example from Next.js](https://github.com/vercel/nextjs-portfolio-starter).
+
+
+
+
 # Portfolio Starter Kit
 
-This portfolio is built with **Next.js** and a library called [Nextra](https://nextra.vercel.app/). It allows you to write Markdown and focus on the _content_ of your portfolio. This starter includes:
+This portfolio is built with **Next.js** and a library called  It allows you to write Markdown and focus on the _content_ of your portfolio. This starter includes:
 
 - Automatically configured to handle Markdown/MDX
 - Generates an RSS feed based on your posts
