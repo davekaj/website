@@ -10,11 +10,10 @@ class MyDocument extends Document {
     const meta = {
       title: 'Dave Kajpusts Website',
       description: 'Personal Website and Blog',
-      image:
-        'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png' // TODO - dk fix
+      image: '/images/headshot3.jpg' // TODO - dk fix, i am unsure if this is what i want to show
     }
 
-    // todo - dk fix below
+    // todo - dk, what is summary_large_image? I should check it out
     return (
       <Html lang="en">
         <Head>
