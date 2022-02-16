@@ -45,11 +45,61 @@ The point I want to get across in this blog is that we will need both Local and 
 
 Let's dig into the Network Currency landscape today.
 ## Network Currencies
-Yo
+Much has been written about Fiat Currencies, Bitcoin and Ethereum. So I will only briefly touch on these topics. One point to take away about the network currencies is that they are competing with each other directly. For example:
 
+- USD is the global reserve currency. All other currencies compete with it in some way. The only other Fiat currency that is competing to be a global reserve currency today is the Chinese Yuan.
+- Bitcoin is competing with all Fiat currencies. It has a desire to replace a lot, if not all of the functions that Fiat currencies have.
+- Ethereum has more ambitious desires than Bitcoin, to become a global decentralized blockchain with general compute, rather than just a global currency. Ironically, Ethereum is currency the best example of a working decentralized currency. In its current form it is being used for over $20 million in transaction fees. A lot of this is derived from the success of NFTs, which have went mainstream and brought in a large new group of people in cryptocurrency.
+- There are many other cryptocurrencies that are competing directly with Ethereum and Bitcoin, and we will speak of some of them here.
+
+### Fiat
+I will only mention the massive problems that exist with the global Fiat system, to remind us how we got here in the first place:
+
+- The United States Federal Reserve and the Federal Government work in conjunction to control the economy through a lot of levers. The main lever is controlling the lending rate. They can do other things, such as purchase assets on the open market, which they did for COVID. But we can focus on the lending rate here.
+- With Global Trade today, this one small lever has an incredible amount of influence over the entire world economy. It can hurt and harm many people across the world who have no business in caring what the US governments current financial situation is. 
+- The system is quite complex, and ends up lending itself to benefits those who understand it well, and are close to the top of the foodchain. It is most evident in the 2008 financial crisis, where the juxtaposition of Bankers getting multi-million dollar bonuses, while middle-class Americans saw their savings wiped out, and sevearly damage some families abilities to provide for themselves.
+- The system is broken. It has been stretched beyond its limits since 2008, and after COVID I would argue that there is 100% certainty it no longer works in it's current form. It fucks over 99% of the people, and benefits the 1% who are privledged, or who are lucky enough to have studied it, and exploited it for themselves.
+- It's not just the United States - but the whole Fiat system. Basically every other government faces the same issues. Only they are in a weaker position because they are not the global reserve currency. The US is in an extreme position of power, as they can print as many dollars as they'd like.
+
+The system cannot be fixed and reprogrammed to work. It has to be replaced by something completely new.
 ### Bitcoin
+There is a common path many people follow with Bitcoin:
+- They hear of it, buy it, and go down the rabbit hole.
+- After a while, they start to believe it is dinosaur technology, and has lost it's narrative.
+- After a longer while, they realize the beauty and strength in it's simplicity. And they come full circle and realize Bitcoin is something they have to own.
+
+Bitcoin as a whole, is the most decentralized currency. It is 100% the only currency worth holding if you need to escape from your country fast, with nothing but a backpack and a laptop. 
+
+It solves a lot of problems, but it doesn't solve all problems. This is why it's narrative has changed over the years. (INSERT THAT PHOTO FROM NICK CARTER?)
+
+Digital gold is the latest narrative that has stuck around. And it very well could be the endgame for Bitcoin.
+
+Points to add:
+- directly attached to the production of energy. makes it extremely flexible
+- there really isn't a single person who can pull levers, it is as stable as possible
+- the miners have some power, and mining is somewhat centralized, but they are also in a dilemma, where if they do greedy things, the price of bitcoin will decrease
+- Naturally has wide distribution, although it has benefitted early adopters, who go on to contribute nothing (see, not perfect)
+- I feel like I am missing 1 or 2 here.
+
 
 ### Ethereum
+Points to add
+- It is being used like crazy
+- Has had a wide distribution due to very early ICO. Getting more widespread with the success of NFTs and DeFi. A wide array of people have now held it
+- These two above mentions make it useful money
+- It is way more complex than bitcoin
+- It is much more than just digital gold. It is a global community. It is a compute network
+- Not everything will run on Ethereum. But it appears it might be the global settlement layer - a la L2's and sidechains. (This is it's current narrative. Like bitcoin, the narrative is always changing)
+
+### Liquity Protocol and LUSD
+Point to Add
+  - A Stablecoin, LUSD, that is backed by one single collateral, which is ETH. Simplicity
+  - LQTY - token that absorbs the fees of the network. The fees are mint and burn fees (TODO - are there more? I don't think so).
+  - The risk is global, the repayments are global
+    - Repay the worst tranch can be done by anyone
+  - It is really an ethereum derivative. Which is what makes ETH as an asset so cool. It has built in programmability. Which lends to ETH being more like money.
+  - 110% collateral
+  - 150% Safety zone (TODO - define better)
 ### Frax
 - Frax
   - frax is one of hte most interesting projects in the space i see today
@@ -73,12 +123,7 @@ Yo
   - The DR (decentralized ratio) is great too
 
 
-## LUSD
-- LUSD
-  - LUSD is like a recursive currency that uses the LUSD to stabalize the debt even more. Really it is protecting the protocol as much as possible to prevent going below 110%
-  - I forget, but it seems that the 150% is the real mark. although probably there is no penalty. 
-  - what they do is they allow the worst lender to always get auto-cashed out. their debt is paid down, and what they receive is the leftover ETH. so if they were 160%, the lowest, someone pays them down, well they keep whatever their LUSD was they withdrew early. and get repaid the 60% extra in ETH, for them to claim later. 
-  - So the risk is global, the repayments are global, the situation is simple
+
 
 ## Local currencies (TODO, link to Ethans blogs)
 - closed loop 
@@ -105,24 +150,16 @@ Yo
 - **So I think we will opt into large currencies yes. But we also need to opt into local currencies that are so close to what we are doing, that decisions we make directly effect us and the people we interact with on a daily basis. This currency might very well be for the physical world, or the digital world.**
 
 
+## Something about guns and violence
+- I want to say something about this, not sure what yet.
+- But basically it revolves around the fact that I DO agree that when people come and attack you with guns, you are kind of fucked, it doesn't matter what currency you are holding. And this is a weak spot for Bitcoin.
+  - I think it is very true that the USD and other Fiat will stay around. Violence and control enable the creation of currencies
+  - I do think it is simplistic thinking. It may defeat bitcoin, but it can't defeat all cryptos
+- However I also think with violence we need to separate how it effects Network and Local currencies.
+  - It should have close to zero effect on a local currency. The local currency is owned by the people using it, and controlled by them. Of course it can collapse the community, endanger them, and overthrow them. But at that point we are beyond currency. It's moreso life or death - and there is no currency that can circumvent that, as your own personal assets are concerned.
+  - Of course it will effect a Network currency. If a Network (Bitcoin, The United States, China, etc.) is under attack, the currency that it produces for the world will take a hit. **Network Currencies are always in competition with each other, and thus when it is in trouble, people will want to exit from it.**
+
 ## Bridging Local and Network Currencies
 - Building a single way for local currencies to opt upwards into the algo-stablecoin. so that many can do it at once.
 
-# Summary Points / Conclusion
-- a
-
-
-# Not sure if it will fit in
-- Scores (a bit too specific?)
-  - Two types of scores
-    - local scores
-    - global scores
-  - WHAT IF YOU COULD PLEDGE SCORES. FIRST YOU START WITH RECIPROCITY.
-    - I know greg markou. he’s a good guy. I give him some of my earned score. overtime, this is reciprocity spreading throughout the score
-    - then we hit a mark where we have to redistribute the scores. the people who have a lot must distribute, or have it burnt. we start again, and bring in more people this time. we give them scores.
-    - we do this continually until we hit (3). which is where small groups of people (families, friends, in both cases 3 to 10 people) are self sustaining in their financial situation.
-    - once there is trust within the system, we begin to take interact with this trust in the outer world, effectively trading it, by allowing groups to take on fractionalized loans, or undercollateralized loans.
-  - If I don't bring in scores, I will probably bring in the concept of TRUST at both levels. 
-    - the governemnt naturally wanted to do everything for us. now we are realizing we should be self sustainable.
-- network currencies
-  - FEI, LUSD, DAI, ?? Terra or MIM, mention?
+## Conclusion
