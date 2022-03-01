@@ -7,23 +7,36 @@ author: Dave Kajpust
 ---
 
 # Local Currencies and Network Currencies (Still a Draft)
+TODO - is Community Currency better? (95% sure it is)
 
-(TODO - better intro sentence)
+What is most under discussed aspect of blockchains and cryptocurrencies, that have the biggest opportunity to change the global financial system?
 
-Local Currencies will change the way the world economy functions at its core - yet it is still mostly unexplored. 
+Well, that my friends, is Local Currencies.
 
-Local Currencies are an underdeveloped field in the cryptocurrency space that I believe will have more significance over the next 5 years. Most of the development in cryptocurrencies we have seen are around "Network Currencies". Let us describe the two types of currencies:
+Local Currencies will change the fundamental operation of our global economy - yet it is largely ignored in the current narrative and conversations of crypto.
 
-- Network Currency - A currency that is used by a large, diverse group of individuals or organizations. It is built to benefit from network effects, and wants to grow at scale, as it becomes more useful as more people us it. It will sacrifice stability to obtain growth.
-- Local Currency - A currency that is used by a small, well defined group of individuals or organizations. It is built to a defined limit, and once it reaches that limit, it does not have a desire to grow. It will sacrifice growth to obtain stability.
+Why has it been ignored? Mostly due to incentives - which has driven 99% of people to pay attention to "Network Currencies" (as I call them). We'll get into more details on why Local Currencies are so important, but first let's explain the two types:
 
-As you can see, they are designed to be complete opposites of each other. 
+- *Network Currency* - A currency that is used by a large, diverse group of individuals or organizations. **It is built to benefit from network effects, and wants to grow at all costs, as it becomes more useful as more people us it. It will sacrifice stability to obtain growth.**
+- *Local Currency* - A currency that is used by a small, well defined group of individuals or organizations. It is built to have a limit to it's size and usage, and once it reaches that limit, it does not have a desire to grow. It will sacrifice growth to obtain stability.
 
-In the 20th and 21st century, we have been conditioned to only trade, barter and exchange in Network Currencies. This has come about through the modernization of the global economy, countries taking a more centralized and more significant role in our lives, ultimately leading to a total dependency on Fiat Currencies (USD, CAD, GBP, etc.).
+As you can see, they are more or less opposites of each other. 
 
-What this means is we have all been forced into economies that fluctuate with instability that is 100% outside of our control. We are going through a particularly instable and turbulent time in the 2020's, which was kicked into high gear by the COVID crisis. We are going to see more instability in the coming years, and it won't be pretty.
+In the 20th and 21st century, we have been conditioned to only trade, barter and exchange in Network Currencies. This has come about through the modernization of the global economy. Countries took a centralized role in our lives, and completely monopolized the economy for themselves. This ultimately lead to a total dependency on Fiat Currencies (USD, CAD, GBP, etc.) - and eventually to the Global, interconnected economy we have today.
 
-We need both stability and growth in life and the economy. I will make a point here - that we should split up these two desire in economics into the two different currencies. Of course you can have some growth within a Local Currency, and some stability in a Network Currency, but I believe Local should optimize for stability, and Network for growth.
+What this means is we have all been forced into economies that fluctuate with instability that is 100% outside of our control. We are going through a particularly instable and turbulent time in the 2020's, which was kicked into high gear by the COVID crisis, and even War. We are likely to see more instability for the next few years.
+
+**And this is where cryptocurrency comes into play. I believe cryptocurrency will allow us to separate economic growth to mainly occur in Network Currencies, such as Bitcoin and Ethereum, that directly compete with Fiat currencies. And I believe cryptocurrencies will also allow Local Currencies to flourish, and have a renassance of small, local economies that are resistant to outside, global fluctuations.**
+
+To focus further, I believe we should organize cryptocurrencies into three categories:
+
+- Decentralized Network Currencies (i.e. Bitcoin, Ether) - These are in direct competition with Fiat Currencies. A world changing technology that will change global economics.
+- Centralized Network Currencies (i.e. Crypto Fintech / Open Wall Street) - A lot of cryptocurrencies as mascaquarding as Decentralized, yet are far from it, and their core algorithms and designs trend towards more centralization. This has largely been ignored for the bull market of 2020-2021, but will increase in discussion in the next bear market. HOWEVER - one thing that is not talked about is that these cryptos can still lead to successful products. "Crypto Fintech" is an exit from legacy financial systems, into new and improved open techonology that was build as a by-product of excitment in decentralized cryptocurrencies. The first wave of "Fintech" didn't really change much because they have to operate within existing legal frameworks, and they were unable to change the system. Today we have Centralized Network Currencies like $BNB and $FTX. Both of these Centralized exchanges are on paths to become global banks, with global customers. I would bet they both have a market cap larger than every bank in the world within 5 years.
+- Decentralized Local Currencies - Local Currencies can operate as decentralized. It would allow Local communities to build bridges of trust upwards and downwards to Network Currencies. It is still vague how these bridges will be built and how the trust will be transferred between local and global communities - but it will be built through a bottom up, trial and error process. Any centralized planning is likely to fail.
+- Centralized Local Currencies - A Centralized Local Currency is a perfectly good use case for open finance technology. There is no harm in having a Proof of Authority (POA) network for a village or city of less than 10,000 people. There are likely societal power dynamics that cannot be replaced by software, and thus there is no reason to build a decentralized system. It is more likely this would work in a system that is meant to mainly focus on trust within the community, rather than a Local Currency that is designed to bridge trust to other communities. The open technology being built will allow for small communities to easily adopt the techonology to build their own system.
+
+TODO - continue here. it is a very good intro and explanation above
+
 
 ## You'll need 1 of each
 - But most of us have been forced into a single network currency for many decades.
