@@ -1,6 +1,6 @@
 ---
 title: Local Currencies and Network Currencies
-date: 2022/02/16
+date: 2022/02/22
 description: Delineating between two types of currencies - Local and Network. Explaining how we've been deprived of Local currencies for decades, how they are likely to emerge through cryptocurrencies, and how we can think about bridging Local Currencies to Network Currencies.
 tag: local currencies,network currencies
 author: Dave Kajpust
@@ -9,6 +9,9 @@ author: Dave Kajpust
 # Local Currencies and Network Currencies (Still a Draft)
 
 (TODO - better intro sentence)
+
+Local Currencies will change the way the world economy functions at its core - yet it is still mostly unexplored. 
+
 Local Currencies are an underdeveloped field in the cryptocurrency space that I believe will have more significance over the next 5 years. Most of the development in cryptocurrencies we have seen are around "Network Currencies". Let us describe the two types of currencies:
 
 - Network Currency - A currency that is used by a large, diverse group of individuals or organizations. It is built to benefit from network effects, and wants to grow at scale, as it becomes more useful as more people us it. It will sacrifice stability to obtain growth.
@@ -21,6 +24,14 @@ In the 20th and 21st century, we have been conditioned to only trade, barter and
 What this means is we have all been forced into economies that fluctuate with instability that is 100% outside of our control. We are going through a particularly instable and turbulent time in the 2020's, which was kicked into high gear by the COVID crisis. We are going to see more instability in the coming years, and it won't be pretty.
 
 We need both stability and growth in life and the economy. I will make a point here - that we should split up these two desire in economics into the two different currencies. Of course you can have some growth within a Local Currency, and some stability in a Network Currency, but I believe Local should optimize for stability, and Network for growth.
+
+## You'll need 1 of each
+- But most of us have been forced into a single network currency for many decades.
+- You'll always want to consistently exit a system that you are not a part of, or not well represented in.
+- Especially if we can make an infinite amount of economies, tokens, monies, etc. 
+- We often think of money and currencies in a finite design space. Countries (which control violence, and before that empires, states, the church, etc.) determine currency. We also have commodities, and other rare metals that can be treated as currency. 
+  - But now the design space is wide open.
+- **So I think we will opt into large currencies yes. But we also need to opt into local currencies that are so close to what we are doing, that decisions we make directly effect us and the people we interact with on a daily basis. This currency might very well be for the physical world, or the digital world.**
 
 We should also split up examples where you would expect to use a Local Currency and a Network Currency:
 
@@ -101,36 +112,42 @@ Point to Add
   - 110% collateral
   - 150% Safety zone (TODO - define better)
 ### Frax
-- Frax
-  - frax is one of hte most interesting projects in the space i see today
-  - it is executing on FRAX. Why?
-    - absorbed 2 billion
-    - minted 2.4 billion (or whatever, 15% more)
-    - create a demand for FXS (buy and burn) to mint FRAX
-    - to burn frax you get in return FXS and FRAX. then its mint and sell the FXS to fully collateralize yourself
-    - it is a community
-  - yet it is a community of investors. a hedge fund. (or possible they are trying to be their own central bank? I need to read this)
-  - key features
-    - governance minimized
-      - Parameters that are up for governance through FXS include adding/adjusting collateral pools, adjusting various fees (like minting or redeeming), and refreshing the rate of the collateral ratio. No other actions such as active management of collateral or addition of human-modifiable parameters are possible other than a hardfork that would require voluntarily moving to a new implementation entirely.
-    - AMOs
-      - this is where you see what it is, a community that enables this as their output. it gives it meaning
-  - The fees it gives you, are revenue
-  - veFXS
-  - *** Anyways, frax is like something we have never seen before. decentralized, currency creation. an output that is proving to be fruitful. very low governance. the output is votable - how to spend money, how to mint more. but these are assets under control of the DAO. the general protocol is low governance. which is great for soneone just holding frax
-  - the question is the FRAX token. it is highly volatile and a lot of the action is tied up in it
-    - this is where it goes against CLOSED LOOP.
-  - The DR (decentralized ratio) is great too
+Frax is one of the most interesting cryptocurrenices in action today (Q1 2022). It has innovated, and has gained traction as a popular stablecoin, and the project is executing well. It states directly in its [documentation](https://docs.frax.finance/) that it would like to replace Bitcoin. 
+
+Here is Frax at a high level:
+- It is backed by real collateral, and but it is also backed by an algorithm. Thus it is a fractional-algorithm (i.e. FRAX) stablecoin.
+- Two Tokens – FRAX is the stablecoin targeting a tight band around $1/coin. Frax Shares (FXS) is the governance token which accrues fees, seigniorage revenue, and excess collateral value.
+- It has one major lever - adjusting the collateral ratio. At 100% CR, it is backed by real collateral. At 80% CR, it is backed by 80% real collateral, and 20% algorithmically backed.
+- It isn't technically under-collaterlized at all. To mint FRAX at 80% CR, you need 80% USDC and 20%.
+- If FRAX is trading at above $1, the protocol decreases the collateral ratio. If FRAX is trading at under $1, the protocol increases the collateral ratio. 
+- It has done a pretty good job at being governance minimized.
+  - Parameters that are up for governance through FXS include adding/adjusting collateral pools, adjusting various fees (like minting or redeeming), and refreshing the rate of the collateral ratio. No other actions such as active management of collateral or addition of human-modifiable parameters are possible other than a hardfork that would require voluntarily moving to a new implementation entirely.
+
+- It has a decentralization ratio measure, where the assets that back FRAX are measured YES or NO as decentarlized, and then added up to see how much of the colalteral is backed by a decentralized asset.
+- it is kind of like a central bank with the AMOS
+- it is a community of investors.
+- veFXS
+  - Lock up your FXS, get veFXS
+  - Get AMO profits above the collateral ratio
+  - 50% of profits are used to buy back FXS and burn it. The other 50% goes to veFXS holders
 
 
+Frax is nowhere near the be all end all. But it has succeeded where other Algo backed stable coins have failed (LINKS?)
 
+Anyways, frax is like something we have never seen before. decentralized, currency creation. an output that is proving to be fruitful. very low governance. the output is votable - how to spend money, how to mint more. but these are assets under control of the DAO. the general protocol is low governance. which is great for soneone just holding frax
 
 ## Local currencies (TODO, link to Ethans blogs)
-- closed loop 
-- **Local currency should be resistant to outside policy, effects, decisions, and attacks.**
+Points to make
+- A lot of this has been from my reading of Ethan Buchmans blog. I am still very new to this whole idea of currency. I have read about it over the years and it didn't really click. But this time around it did. I believe with conviction, this will be big. 
+- People are building communities already (link to tucker). I think this is step 1
+- Closed Loop
+  - Meaning that exchanging goods, services, and money can be kept within the community
+- Stability
+  - **Local currency should be resistant to outside policy, effects, decisions, and attacks.**
   - Is it possible that Stablility should not even be expected of a Network currency? Well maybe. Maybe bitcoin is the best we will ever get. But I think you should focus on the stability from within first, rather than relay on stability from the outskirts.
 - reciprocity, redistribution, house-holding, exchange (they build on each other in that order)
   - three still found in families, friends, orgs, communities, indiginous tribes,
+  - We can see some very early processes playing out in crypto. Airdrops are an example of redistribution. Same with community treasuries. 
 - Concepts
   - ragequitting helps with the two way street. but part of the two way street is that the communities joining need to be subject to some fault and risk as well.
   - take 100 of your LOCAL coin. Agree to swap your real world for 500 LOCAL coin in future. thus brining you into the system
@@ -141,25 +158,33 @@ Point to Add
   - but extremely good and very implementable at local levels
   - your friends, parents, barber, butcher, grocer, barista, personal trainer, favorite restaurant
     - clearly very bad for tracking taxes (but that is a topic for a different day)
-
-## Making a point that you will likely want to participate in 1 of each, and that is probably enough for everyone. But most of us have been forced into a single network currency for many decades.
-- You'll always want to consistently exit a system that you are not a part of, or not well represented in.
-- Especially if we can make an infinite amount of economies, tokens, monies, etc. 
-- We often think of money and currencies in a finite design space. Countries (which control violence, and before that empires, states, the church, etc.) determine currency. We also have commodities, and other rare metals that can be treated as currency. 
-  - But now the design space is wide open.
-- **So I think we will opt into large currencies yes. But we also need to opt into local currencies that are so close to what we are doing, that decisions we make directly effect us and the people we interact with on a daily basis. This currency might very well be for the physical world, or the digital world.**
+- Will probably cause problems for collecting taxes
 
 
-## Something about guns and violence
-- I want to say something about this, not sure what yet.
-- But basically it revolves around the fact that I DO agree that when people come and attack you with guns, you are kind of fucked, it doesn't matter what currency you are holding. And this is a weak spot for Bitcoin.
-  - I think it is very true that the USD and other Fiat will stay around. Violence and control enable the creation of currencies
-  - I do think it is simplistic thinking. It may defeat bitcoin, but it can't defeat all cryptos
-- However I also think with violence we need to separate how it effects Network and Local currencies.
-  - It should have close to zero effect on a local currency. The local currency is owned by the people using it, and controlled by them. Of course it can collapse the community, endanger them, and overthrow them. But at that point we are beyond currency. It's moreso life or death - and there is no currency that can circumvent that, as your own personal assets are concerned.
-  - Of course it will effect a Network currency. If a Network (Bitcoin, The United States, China, etc.) is under attack, the currency that it produces for the world will take a hit. **Network Currencies are always in competition with each other, and thus when it is in trouble, people will want to exit from it.**
 
 ## Bridging Local and Network Currencies
 - Building a single way for local currencies to opt upwards into the algo-stablecoin. so that many can do it at once.
+- **I think this will be a very important area, which today is completely unexplored, due to there being very little existing local currencies.**
+- Bridging the gap seems like a very big deal because local communities will have economic output, and they will want to exchange their local output for global assets.
+  - Of course they could just exchange it for Bitcoin, and then bridge into the world with that.
+  - **but I believe many local currencies will want some reputation that is recognized by the greater community. their currency will be a way to represent legitimacy**
+  - This brings me to a point that Balaji made - that cities will have city coins, which can be used to invest, speculate, and transact within a city. Historically, real estate has been the represetative way to invest in a city and it's growth. Decoupling speculations from home ownership will be a massive win for many global cities around the world. Toronto, where I live, has been victim to foreign speculators buying up condos, and local investors owning multiple properties and charging rent. 
+  - A city with it's own currency has incredible opportunity. Startup cities will become real - where we see small cities take advantage of this and grow. There are also big cities like Miami that seem like they could execute building their own token.
+- Local currencies will need to follow some sort of standard. ERC-20 standard is for a basic token. But a local currency might want to even run its own network of nodes. Cosmos is well positioned to be infrastructure that powers this.
+- Once there is a standard for Local Currencies that gains traction, there will be a clear opportunity of how to bridge them to the Network Currencies.
+- 
 
 ## Conclusion
+- Local currencies will aim to be more stable, network currencies aim for growth.
+- Most people will be transacting with one major local currency and one major network currency.   
+- Network currencies will always be battling each other. It is a battleground. 
+  - I think there is argument to be made that the concept of a world reserve currency might actually disapear, rather than the USA lose it to some other country.
+- Local currencies are going to grow. Probably a bit slow. There isn't immediate possibility for it to grow at expoential rates.
+- Local currencies enable closed loop and circular ecnomics more easily, and credit clearing
+- The bridging between local and network will be a big opportunity.
+
+
+## References 
+Also good for further readings
+- https://www.grassrootseconomics.org/community-currencies
+- ethans blog
