@@ -18,7 +18,7 @@ Local Currencies will change the fundamental operation of our global economy - y
 Why has it been ignored? Mostly due to incentives - which has driven 99% of people to pay attention to "Network Currencies" (as I call them). We'll get into more details on why Local Currencies are so important, but first let's explain the two types:
 
 - *Network Currency* - A currency that is used by a large, diverse group of individuals or organizations. **It is built to benefit from network effects, and wants to grow at all costs, as it becomes more useful as more people us it. It will sacrifice stability to obtain growth.**
-- *Local Currency* - A currency that is used by a small, well defined group of individuals or organizations. It is built to have a limit to it's size and usage, and once it reaches that limit, it does not have a desire to grow. It will sacrifice growth to obtain stability.
+- *Local Currency* - A currency that is used by a small, well defined group of individuals or organizations. It is built to have a limit to it's size and usage, and once it reaches that limit, it does not have a desire to grow. It will sacrifice growth to obtain stability. A Local Currency MAY or MAY NOT look exactly like currency as we understand it today. It could be closer to a reputation, a score, or even some sort of metaverse / video game gold.
 
 As you can see, they are more or less opposites of each other. 
 
@@ -37,16 +37,9 @@ To focus further, I believe we should organize cryptocurrencies into three categ
 
 TODO - continue here. it is a very good intro and explanation above
 
+In 5 years, the majority of people will be interacting with Local Currencies and Network Currencies simultaneously. The days where we used to be locked into using a single currency - our own countries Fiat, will be long gone.
 
-## You'll need 1 of each
-- But most of us have been forced into a single network currency for many decades.
-- You'll always want to consistently exit a system that you are not a part of, or not well represented in.
-- Especially if we can make an infinite amount of economies, tokens, monies, etc. 
-- We often think of money and currencies in a finite design space. Countries (which control violence, and before that empires, states, the church, etc.) determine currency. We also have commodities, and other rare metals that can be treated as currency. 
-  - But now the design space is wide open.
-- **So I think we will opt into large currencies yes. But we also need to opt into local currencies that are so close to what we are doing, that decisions we make directly effect us and the people we interact with on a daily basis. This currency might very well be for the physical world, or the digital world.**
-
-We should also split up examples where you would expect to use a Local Currency and a Network Currency:
+> Note - this section below is old world, that I am likely to keep.
 
 **Local Currency**
 - Immediate Family and Friends.
@@ -76,81 +69,11 @@ Much has been written about Fiat Currencies, Bitcoin and Ethereum. So I will onl
 - Ethereum has more ambitious desires than Bitcoin, to become a global decentralized blockchain with general compute, rather than just a global currency. Ironically, Ethereum is currency the best example of a working decentralized currency. In its current form it is being used for over $20 million in transaction fees. A lot of this is derived from the success of NFTs, which have went mainstream and brought in a large new group of people in cryptocurrency.
 - There are many other cryptocurrencies that are competing directly with Ethereum and Bitcoin, and we will speak of some of them here.
 
-### Fiat
-I will only mention the massive problems that exist with the global Fiat system, to remind us how we got here in the first place:
-
-- The United States Federal Reserve and the Federal Government work in conjunction to control the economy through a lot of levers. The main lever is controlling the lending rate. They can do other things, such as purchase assets on the open market, which they did for COVID. But we can focus on the lending rate here.
-- With Global Trade today, this one small lever has an incredible amount of influence over the entire world economy. It can hurt and harm many people across the world who have no business in caring what the US governments current financial situation is. 
-- The system is quite complex, and ends up lending itself to benefits those who understand it well, and are close to the top of the foodchain. It is most evident in the 2008 financial crisis, where the juxtaposition of Bankers getting multi-million dollar bonuses, while middle-class Americans saw their savings wiped out, and sevearly damage some families abilities to provide for themselves.
-- The system is broken. It has been stretched beyond its limits since 2008, and after COVID I would argue that there is 100% certainty it no longer works in it's current form. It fucks over 99% of the people, and benefits the 1% who are privledged, or who are lucky enough to have studied it, and exploited it for themselves.
-- It's not just the United States - but the whole Fiat system. Basically every other government faces the same issues. Only they are in a weaker position because they are not the global reserve currency. The US is in an extreme position of power, as they can print as many dollars as they'd like.
-
-The system cannot be fixed and reprogrammed to work. It has to be replaced by something completely new.
-### Bitcoin
-There is a common path many people follow with Bitcoin:
-- They hear of it, buy it, and go down the rabbit hole.
-- After a while, they start to believe it is dinosaur technology, and has lost it's narrative.
-- After a longer while, they realize the beauty and strength in it's simplicity. And they come full circle and realize Bitcoin is something they have to own.
-
-Bitcoin as a whole, is the most decentralized currency. It is 100% the only currency worth holding if you need to escape from your country fast, with nothing but a backpack and a laptop. 
-
-It solves a lot of problems, but it doesn't solve all problems. This is why it's narrative has changed over the years. (INSERT THAT PHOTO FROM NICK CARTER?)
-
-Digital gold is the latest narrative that has stuck around. And it very well could be the endgame for Bitcoin.
-
-Points to add:
-- directly attached to the production of energy. makes it extremely flexible
-- there really isn't a single person who can pull levers, it is as stable as possible
-- the miners have some power, and mining is somewhat centralized, but they are also in a dilemma, where if they do greedy things, the price of bitcoin will decrease
-- Naturally has wide distribution, although it has benefitted early adopters, who go on to contribute nothing (see, not perfect)
-- I feel like I am missing 1 or 2 here.
 
 
-### Ethereum
-Points to add
-- It is being used like crazy
-- Has had a wide distribution due to very early ICO. Getting more widespread with the success of NFTs and DeFi. A wide array of people have now held it
-- These two above mentions make it useful money
-- It is way more complex than bitcoin
-- It is much more than just digital gold. It is a global community. It is a compute network
-- Not everything will run on Ethereum. But it appears it might be the global settlement layer - a la L2's and sidechains. (This is it's current narrative. Like bitcoin, the narrative is always changing)
-
-### Liquity Protocol and LUSD
-Point to Add
-  - A Stablecoin, LUSD, that is backed by one single collateral, which is ETH. Simplicity
-  - LQTY - token that absorbs the fees of the network. The fees are mint and burn fees (TODO - are there more? I don't think so).
-  - The risk is global, the repayments are global
-    - Repay the worst tranch can be done by anyone
-  - It is really an ethereum derivative. Which is what makes ETH as an asset so cool. It has built in programmability. Which lends to ETH being more like money.
-  - 110% collateral
-  - 150% Safety zone (TODO - define better)
-### Frax
-Frax is one of the most interesting cryptocurrenices in action today (Q1 2022). It has innovated, and has gained traction as a popular stablecoin, and the project is executing well. It states directly in its [documentation](https://docs.frax.finance/) that it would like to replace Bitcoin. 
-
-Here is Frax at a high level:
-- It is backed by real collateral, and but it is also backed by an algorithm. Thus it is a fractional-algorithm (i.e. FRAX) stablecoin.
-- Two Tokens – FRAX is the stablecoin targeting a tight band around $1/coin. Frax Shares (FXS) is the governance token which accrues fees, seigniorage revenue, and excess collateral value.
-- It has one major lever - adjusting the collateral ratio. At 100% CR, it is backed by real collateral. At 80% CR, it is backed by 80% real collateral, and 20% algorithmically backed.
-- It isn't technically under-collaterlized at all. To mint FRAX at 80% CR, you need 80% USDC and 20%.
-- If FRAX is trading at above $1, the protocol decreases the collateral ratio. If FRAX is trading at under $1, the protocol increases the collateral ratio. 
-- It has done a pretty good job at being governance minimized.
-  - Parameters that are up for governance through FXS include adding/adjusting collateral pools, adjusting various fees (like minting or redeeming), and refreshing the rate of the collateral ratio. No other actions such as active management of collateral or addition of human-modifiable parameters are possible other than a hardfork that would require voluntarily moving to a new implementation entirely.
-
-- It has a decentralization ratio measure, where the assets that back FRAX are measured YES or NO as decentarlized, and then added up to see how much of the colalteral is backed by a decentralized asset.
-- it is kind of like a central bank with the AMOS
-- it is a community of investors.
-- veFXS
-  - Lock up your FXS, get veFXS
-  - Get AMO profits above the collateral ratio
-  - 50% of profits are used to buy back FXS and burn it. The other 50% goes to veFXS holders
-
-
-Frax is nowhere near the be all end all. But it has succeeded where other Algo backed stable coins have failed (LINKS?)
-
-Anyways, frax is like something we have never seen before. decentralized, currency creation. an output that is proving to be fruitful. very low governance. the output is votable - how to spend money, how to mint more. but these are assets under control of the DAO. the general protocol is low governance. which is great for soneone just holding frax
 
 ## Local currencies (TODO, link to Ethans blogs)
-Points to make
+### Points to make on Ethans Blog
 - A lot of this has been from my reading of Ethan Buchmans blog. I am still very new to this whole idea of currency. I have read about it over the years and it didn't really click. But this time around it did. I believe with conviction, this will be big. 
 - People are building communities already (link to tucker). I think this is step 1
 - Closed Loop
@@ -173,6 +96,21 @@ Points to make
     - clearly very bad for tracking taxes (but that is a topic for a different day)
 - Will probably cause problems for collecting taxes
 
+### Grassroots Economics and Others
+- TODO
+### Personal Points to make - link to tucker max
+- Most local currencies we see today are for online communities
+- We are starting to see physical - local currencies created
+  - ETH Denver Spork
+    - https://medium.com/ethdenver/sporkdao-token-economics-spork-rewards-5d0c1aaa0ba6 - this is actually a very good blog. Now, $SPORK looks pretty small right now, but can it become a triving community? Perhaps it becomes the driving force behind making Denver a global Blockchain Hub. It has already brought likely millions of  dollars in tourism for Denver.
+  - ETH Denver food tokens
+    - A small example. But food vendors and people loved this. It exists for 4 days and then becomes useless. However, maybe in 2023, $SPORK can be used to pay for food 
+- We are going to see physical communities from scratch that are even bigger
+  - Tucker Max - Full out self sustaining communities.
+    - Although an extreme viewpoint which I don't fully agree will happen - I still 100% agree with his concept of living back in a simpler, more natural community, that is self sustaining.
+  - CityDAO - in wyoming
+    - Crypto cities will look both like large ranches that band together to protect each other.
+    - As well as cheap, portable housing that can create startup cities super fast.
 
 
 ## Bridging Local and Network Currencies
@@ -188,6 +126,9 @@ Points to make
 - 
 
 ## Conclusion
+> Note on fiat to close to fit in nicely - We know the global Fiat system, and monetary governing bodies around the world, are broken. They are lead us from crisis to crisis, with complete inability to stabalilze the economy. Since 2008 this has been evidently clear, and only continue to get worse. Bitcoin has given us a starting point, leading to many decentralized network currencies. And now we will build out Community Currencies to completely change the way we interact. To a way that is more stable, and understandable, for our tiny human brains.
+
+
 - Local currencies will aim to be more stable, network currencies aim for growth.
 - Most people will be transacting with one major local currency and one major network currency.   
 - Network currencies will always be battling each other. It is a battleground. 
