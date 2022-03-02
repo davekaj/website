@@ -1,8 +1,8 @@
 ---
 title: Local Currencies and Network Currencies
 date: 2022/02/22
-description: Delineating between two types of currencies - Local and Network. Explaining how we've been deprived of Local currencies for decades, how they are likely to emerge through cryptocurrencies, and how we can think about bridging Local Currencies to Network Currencies.
-tag: local currencies,network currencies
+description: TODO
+tag: community currencies,network currencies
 author: Dave Kajpust
 ---
 
@@ -97,8 +97,23 @@ Much has been written about Fiat Currencies, Bitcoin and Ethereum. So I will onl
 - Will probably cause problems for collecting taxes
 
 ### Grassroots Economics and Others
-- TODO
-### Personal Points to make - link to tucker max
+- https://www.grassrootseconomics.org/pages/about-us.html
+  - CIC currencies
+  - 5 Pesas
+  - the 5 pesas went up to **SARAFU-CREDIT**
+  - i am pretty sure SARAFU credit can be exchanged for kenyan shillings
+  - [http://sustainablecity.org/articles/roots.htm](http://sustainablecity.org/articles/roots.htm)
+  - link to Ethan
+
+### Citycoins.co
+- **[https://www.citycoins.co/](https://www.citycoins.co/)**
+    - **i am almost certain this will be included and I MUST ADD MORE HERE RESEARCH THIS FUCK MORE REEARCH**
+    - **it works with STX…. GOOD POINT - i think this is quite key.. BTC IS GOOD**
+    - **interestingly…. VERY interestingly, the economic model does not depend on any government support**
+    - not necessarily the best design, but its somewhere to start!
+
+###
+### Personal Points to make
 - Most local currencies we see today are for online communities
 - We are starting to see physical - local currencies created
   - ETH Denver Spork
@@ -112,8 +127,37 @@ Much has been written about Fiat Currencies, Bitcoin and Ethereum. So I will onl
     - Crypto cities will look both like large ranches that band together to protect each other.
     - As well as cheap, portable housing that can create startup cities super fast.
 
+## What can Communties do to build with this stuff?
+- TODO - Crypto cities vitalik
+  - Not only local coins.... but local Governments too!
+    - ownership (land)
+    - business registration
+    - voting and governance
+    - identity
+    - GIVE A LINK TO VITALIKS BLOG
+  - NOTE - this is where the TOOLS below come in. So fit that in.
+- We will give them basic tools to build these currencies in a plug and play manner. Creating a local currency will be as easy as creating a Shopify Store.
+- Tools
+  - Cosmos - by nature no buy in. permissionless, not judgemental bridges. bottom up
+  - DeFi Primitives
+    - Bonding Curves
+    - Algo borrow and lending rates
+    - Easilt deployable NFTs and ERC20s
+    - Staking
+  - Governance Primitives
+    - Voting, quadratic voting
+  - Privacy 
+  - Identities
+  - Tax collection & accounting.
+- These tools will be built, and will be built upon for open source Community organization. 
+- Communities will be brought into the digital age with this.
+- This will also be adopted by larger entities, like cities, who want to streamline their organizations. Having these stanards built across the world will create for human efficiencies, and save us millions of hours of time.
+
+
+
 
 ## Bridging Local and Network Currencies
+- IBC is likely the best thing to use for this.
 - Building a single way for local currencies to opt upwards into the algo-stablecoin. so that many can do it at once.
 - **I think this will be a very important area, which today is completely unexplored, due to there being very little existing local currencies.**
 - Bridging the gap seems like a very big deal because local communities will have economic output, and they will want to exchange their local output for global assets.
@@ -123,22 +167,27 @@ Much has been written about Fiat Currencies, Bitcoin and Ethereum. So I will onl
   - A city with it's own currency has incredible opportunity. Startup cities will become real - where we see small cities take advantage of this and grow. There are also big cities like Miami that seem like they could execute building their own token.
 - Local currencies will need to follow some sort of standard. ERC-20 standard is for a basic token. But a local currency might want to even run its own network of nodes. Cosmos is well positioned to be infrastructure that powers this.
 - Once there is a standard for Local Currencies that gains traction, there will be a clear opportunity of how to bridge them to the Network Currencies.
-- 
 
 ## Conclusion
 > Note on fiat to close to fit in nicely - We know the global Fiat system, and monetary governing bodies around the world, are broken. They are lead us from crisis to crisis, with complete inability to stabalilze the economy. Since 2008 this has been evidently clear, and only continue to get worse. Bitcoin has given us a starting point, leading to many decentralized network currencies. And now we will build out Community Currencies to completely change the way we interact. To a way that is more stable, and understandable, for our tiny human brains.
 
-
+- Local currencies are being ignored for now, but will change the world
+  - they dont fix everything, they are not a panacea. but they will change a lot
 - Local currencies will aim to be more stable, network currencies aim for growth.
-- Most people will be transacting with one major local currency and one major network currency.   
-- Network currencies will always be battling each other. It is a battleground. 
-  - I think there is argument to be made that the concept of a world reserve currency might actually disapear, rather than the USA lose it to some other country.
 - Local currencies are going to grow. Probably a bit slow. There isn't immediate possibility for it to grow at expoential rates.
 - Local currencies enable closed loop and circular ecnomics more easily, and credit clearing
-- The bridging between local and network will be a big opportunity.
-
+  - this is a way we can fundamentally improve the world economy to look more natural.
+- OPEN QUESTION - The bridging between local and network will be a big opportunity.
+- OPEN QUESTIONS maybe to include
+  - will they look fundamentally different at different sizes? (NNT)
+    - Or can a cosmos chain just be used for netowrk and community currencies
 
 ## References 
-Also good for further readings
+[1]
+[2]
+[3]
+[4]
+
+To add these in
 - https://www.grassrootseconomics.org/community-currencies
 - ethans blog
