@@ -18,9 +18,10 @@ Uniswap is split into the [**Core Contracts**](https://github.com/Uniswap/v2-cor
 
 #### UniswapV2Factory.sol
 
-The contract that creates every **UniswapV2Pair.sol**. Each Pair is it's own Automatic Market Maker (AMM).
+The contract that creates every **UniswapV2Pair.sol**. Each Pair is it's own Automatic Market Maker (AMM). You can see the contract on [**Etherscan**](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f).
 
 - `createPair()` - This is the main function to pay attention to. It will create a new AMM for a pair of tokens, with a deterministic address.
+- `getPair()` - Provide the two tokens of an AMM, and get back the AMM contract address.
 
 #### UniswapV2Pair.sol
 
