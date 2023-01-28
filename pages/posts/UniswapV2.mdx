@@ -8,11 +8,11 @@ author: Dave Kajpust
 
 # Uniswap V2 Code Explained in 5 minutes
 
-Uniswap V2 is not a very complex protocol. There are only a few key points to understand. I ignore a lot of the library code, supporting functions, fees, and others, etc. I just focus on swapping, and depositing/removing liquidity.
+This post should be used as a reference to someone who needs to quickly integrate with Uniswap V2. It only focuses on the most important functions to interact with, such as swapping and depositing/removing liquidity. Uniswap V2 is not a very complex protocol, and this should be quick.
 
 ## Architecture
 
-Uniswap is split into the **Core Contracts** and the **Periphery Contracts**. Core consists of low level contracts that do the majority of the swaps and liquidity transactions, and are quite gas efficient. Periphery consists of contracts that are less gas optimized, and a little easier to read and understand. They expose many view functions that provide important data, such as a quote price or the expected return from a swap. The Periphery contracts are the contracts that users interact with.
+Uniswap is split into the [**Core Contracts**](https://github.com/Uniswap/v2-core) and the [**Periphery Contracts**](https://github.com/Uniswap/v2-periphery). Core consists of low level contracts that do the majority of the swaps and liquidity transactions, and are quite gas efficient. Periphery consists of contracts that are less gas optimized, and a little easier to read and understand. They expose many view functions that provide important data, such as a quote price or the expected return from a swap. The Periphery contracts are the contracts that users interact with.
 
 ## Core Code
 
@@ -29,6 +29,7 @@ Is a contract that contains code to make it an Automatic Market Maker (AMM), and
 - `mint()` - Should always be called by the **Router** Periphery contract. It accepts a deposit of 2 tokens, and will then mint an LP token in return to the user. Note, that the function works by first sending the tokens to the Pair contract with a transfer, and then doing the math to compute the LP tokens the user will get.
 - `burn()` - The opposite of mint. It will burn an LP token and return the 2 underlying tokens in the pair, as per the current ratio of the 2 tokens in the AMM. Should be called by the **Router**.
 - `swap()` - Swap 1 token for another on an AMM Pair. Should always be called by the **Router**. The Router has 6 different functions for swapping, with different permutations for tokens being swapped. This will be explained below.
+- `getReserves()` - A useful getter to retrieve the balance of each token in the reserve, as well as the last timestamp the reserves were updated.
 
 #### UniswapV2ERC20.sol
 
@@ -38,6 +39,26 @@ It's just a basic ERC20 contract, with the `permit()` function included. The sym
 
 ## Periphery Code
 
-**UniswapV2Router02.sol**
+#### UniswapV2Router02.sol
 
-- **addLiquidity() or addLiquidityETH()**
+[**Router02**](https://etherscan.io/address/0x7a250d5630b4cf539739df2c5dacb4c659f2488d) is the one deployed to mainnet and the one to pay attention to. Note that it has special functions to add **ETH**. The only difference is that it first wraps or unwraps **ETH** into **WETH**. This was a design decision made in Uniswap V2. Using **WETH** means that it can strictly be an ERC20 protocol, and it does not have to deal with `msg.value`.
+
+- `addLiquidity()` - We will only focus on this function, as it is the most common permutation of adding liquidity. This function first handles the amount of tokens being deposited by the user with some math in `_addLiquidity()`. Because a user can swap in the same block that someone is adding liquidity, the deposit amount that the user expected they needed for each token may shift. This is commonly known as **slippage**, and you've probably seen it in the Uniswap app. It also accepts a `deadline` parameter, so that a transaction can be aborted if it takes too long to get accepted in a block. It will then transfer both tokens to the Pair contract, and then call `mint()` on the pair. 
+- `removeLiquidity()` - We will only focus on this function, as it is the most common permutation of removing liquidity. It's basically just the opposite of `addLiquidity()` and we will leave it at that.
+- `_swap()` - We will focus on this `internal` function, since it is the underlying function to all the permutations of swapping that are available. It handles a path of any length, to swap between any two assets. The `path` is typically only of array length `2` since most tokens are connect by **WETH**, i.e. **XYZ/WETH --> WETH/ABC**. It will loop through the `path` array and swap tokens in the Pair AMMs until it gets the token it needs, and that token will be sent to the user.
+
+The next functions code all originate in **UniswapV2Library.sol**, but they are exposed in **Router02**.
+
+- `quote()` - Get the quote price of a token. Does not include swap fee, so it would be like the quote price that Coin Market Cap would grab.
+- `getAmountOut()` - Estimate the amount of a token you will receive, by inputting an exact amount of the other token that you are trading.
+- `getAmountIn()` - The same as `getAmountOut()` but here you specify how much you want out, to learn how much of the token you are trading you will need.
+- `getAmountsOut()` - When you `swap` on Uniswap you can use multiple pools. For example, **USDC --> WETH --> GRT** is the path you would need to take to swap **USDC** for **GRT**. This function wants you to provide a **USDC** amount and the **USDC/WETH** and **WETH/GRT** Pair contract addresses. The Pair addresses make up the `path` array parameter.
+- `getAmountsIn()` - Same as `getAmountsOut()`, but again you are specifying the amount out, and learning how much you will have to put in.
+
+#### UniswapV2Migrator.sol
+
+This contract is a helper contract that allows users who had tokens deposited in Uniswap V1 to migrate the tokens to V2 in one transaction. It isn't that important.
+
+## End
+
+That's it, it really isn't that hard. You can do ~90% of what you need for interacting with Uniswap with this information.
