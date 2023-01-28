@@ -1,0 +1,43 @@
+---
+title: Uniswap V3 Code Explained in 5 minutes
+date: 2023/01/29
+description: Explaining the most important parts of the code for future, easy reference
+tag: DeFi,Uniswap
+author: Dave Kajpust
+---
+
+# Uniswap V3 Code Explained in 5 minutes
+
+This post should be used as a reference to someone who needs to quickly integrate with Uniswap V3. It only focuses on the most important functions to interact with, such as swapping and depositing/removing liquidity. Uniswap V3 is more complex than V2, and will take a bit longer to explain.
+
+## Architecture
+
+Uniswap is split into the [**Core Contracts**](https://github.com/Uniswap/v3-core) and the [**Periphery Contracts**](https://github.com/Uniswap/v3-periphery). Core consists of low level contracts that do the majority of the swaps and liquidity transactions, and are quite gas efficient. Periphery consists of contracts that are less gas optimized, and a little easier to read and understand. They expose many view functions that provide important data, such as a quote price or the expected return from a swap. The Periphery contracts are the contracts that users interact with.
+
+## Core Code
+
+#### UniswapV2Factory.sol
+
+TODO (check V2 for hints on how to start)
+
+#### UniswapV2Pair.sol
+
+TODO (check V2 for hints on how to start)
+
+#### UniswapV2ERC20.sol
+
+TODO (check V2 for hints on how to start)
+
+## Periphery Code
+
+#### UniswapV2Router02.sol
+
+TODO (check V2 for hints on how to start)
+
+#### UniswapV2Migrator.sol
+
+TODO (check V2 for hints on how to start)
+
+## End
+
+That's it, it really isn't that hard. You can do ~90% of what you need for interacting with Uniswap with this information.
