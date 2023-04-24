@@ -8,7 +8,7 @@ author: Dave Kajpust
 
 # Uniswap V3 Code Explained in 5 minutes
 
-This post should be used as a reference to someone who needs to quickly integrate with Uniswap V3. It only focuses on the most important functions to interact with, such as swapping and depositing/removing liquidity. Uniswap V3 is more complex than V2, and will take a bit longer to explain.
+This post should be used as a reference to someone who needs to quickly integrate with Uniswap V3. It only focuses on the most important functions to interact with, such as swapping and depositing/removing liquidity. Uniswap V3 is more complex than V2, and will take a bit longer to explain. A lot of the notes from this post come from the very well documented [**Uniswap V3 Book**](https://uniswapv3book.com/).
 
 ## Architecture
 
@@ -16,28 +16,76 @@ Uniswap is split into the [**Core Contracts**](https://github.com/Uniswap/v3-cor
 
 ## Core Code
 
-#### UniswapV2Factory.sol
+#### UniswapV3Factory.sol
 
 TODO (check V2 for hints on how to start)
 
-#### UniswapV2Pair.sol
+#### UniswapV3Pair.sol
 
 TODO (check V2 for hints on how to start)
 
-#### UniswapV2ERC20.sol
+#### UniswapV3ERC20.sol
 
 TODO (check V2 for hints on how to start)
 
 ## Periphery Code
 
-#### UniswapV2Router02.sol
+#### UniswapV3Router02.sol
 
 TODO (check V2 for hints on how to start)
 
-#### UniswapV2Migrator.sol
+#### UniswapV3Migrator.sol
 
 TODO (check V2 for hints on how to start)
 
 ## End
 
 That's it, it really isn't that hard. You can do ~90% of what you need for interacting with Uniswap with this information.
+
+## Notes
+### Ticks
+- Ticks are just price ranges split up
+- Each is really its own curve, with its
+- Moving out of a range, means it must trade in that liquidity. if there is no liquiidty in that range, it would be partially filled, and then empty
+    - side note - that is how that one guy rugged hard the Fust pool, he put liquidity in the extrememly expensive range way outside the concentraded part, dumped it, and then the oracle was used to manipulate everything
+- In V3, the entire price range is demarcated by evenly distributed discrete ticks. Each tick has an index and corresponds to a certain price:
+- In V3, the entire price range is split into evenly distributed range of price. The price is split into exact 'ticks'. You then specify the 2 ticks of the range you want to trade within.
+- Taking powers of 1.0001 has a desirable property: the difference between two adjacent ticks is 0.01% or 1 basis point.
+- Tick Bitmap index
+    - This is where you need to solve and find the ticks you need to participate in
+    - When there’s liquidity provided in different price ranges, we cannot simply calculate the target tick. We need to find it. Thus, we need to index all ticks that have liquidity and then use the index to find ticks to “inject” enough liquidity for a swap. In this step, we’re going to implement such index.
+    - Bitmap is of course a number representation in binary format
+    - https://uniswapv3book.com/docs/milestone_2/tick-bitmap-index/ - this is a really good explainer and I need to understand it better
+
+
+### Maths
+- Same as V2 but augmented
+- To handle transitioning between price ranges, simplify liquidity management, and avoid rounding errors, Uniswap V3 uses these new concepts:
+- `L = sqrt(xy)`
+- `sqrt(P) = sqrt(y/x)` - which is the price of token0 in terms of token1. The reverse would be the inverse
+- L is the geometric mean of x and y
+- Another formula - `L = delta(y) / delta(sqrt(P))`
+- pricing
+    - we don't need to calculate the price at any time, it's just an inbetween value
+    - we don't even need x and y we only need to know L and sqrt(P)
+    - therefore
+        - `delta(y) = delta(sqrt(P)*L)`
+        - `delta(x) = delta(1/sqrt(P)*L)`
+- This guys python version of the uni map is dope [Uniswap Math in Python](https://github.com/Jeiwan/uniswapv3-code/blob/main/unimath.py)
+- Ahhh, so when we do the math, we KEEP THE SQUARE ROOT on the side. example
+    - price = 5000 for ETH, 1 for USDC
+    - sqrt(P) = sqrt(5000/1) = ~74.16
+    - sqrt(P) is then held and used for the rest of teh calculations. we never actually grab P
+- This page is key to understand https://uniswapv3book.com/docs/milestone_1/calculating-liquidity/
+
+### Quote contract
+- quote calls swap of a pool with input amount and swap direction;
+- swap performs a real swap, it runs the loop to fill the input amount specified by user;
+- to get tokens from user, swap calls the swap callback on the caller;
+- the caller (Quote contract) implements the callback, in which it reverts with output amount, new price, and new tick;
+- the revert bubbles up to the initial quote call;
+- in quote, the revert is caught, revert reason is decoded and returned as the result of calling quote.
+- LIMIATION - the function cannot be view or pure
+
+### Limit orders
+- Limit orders are simply liquidity placed at a tick outside the current range. If you place all your token at one tick, it will hit that limit order when that price is reached. Not bad

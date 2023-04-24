@@ -50,7 +50,7 @@ It's just a basic ERC20 contract, with the `permit()` function included. The sym
 
 The next functions code all originate in **UniswapV2Library.sol**, but they are exposed in **Router02**.
 
-- `quote()` - Get the quote price of a token. Does not include swap fee, so it would be like the quote price that Coin Market Cap would grab.
+- `quote()` - Get the quote price of a token. Does not include swap fee, so it would be like the quote price that Coin Market Cap would grab. It is mainly used for calculating the price for liquidity deposit and removal, as the quote price is what you are entering those assets at.
 - `getAmountOut()` - Estimate the amount of a token you will receive, by inputting an exact amount of the other token that you are trading.
 - `getAmountIn()` - The same as `getAmountOut()` but here you specify how much you want out, to learn how much of the token you are trading you will need.
 - `getAmountsOut()` - When you `swap` on Uniswap you can use multiple pools. For example, **USDC --> WETH --> GRT** is the path you would need to take to swap **USDC** for **GRT**. This function wants you to provide a **USDC** amount and the **USDC/WETH** and **WETH/GRT** Pair contract addresses. The Pair addresses make up the `path` array parameter.
