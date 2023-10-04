@@ -1,0 +1,28 @@
+body {
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 40px auto;
+    max-width: 600px;
+    font-family: 'Avenir', 'Times New Roman', Times, serif;
+    /* "Courier New" - looks like code */
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.title {
+    margin-bottom: 0.25em;
+}
+
+.contact {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 0.25em;
+}
