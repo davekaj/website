@@ -32,3 +32,14 @@ h2 {
   justify-content: space-between;
   align-items: baseline;
 }
+
+.header-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+/* This will create a space of 1rem between the "Home" and "Blog" links */
+.nav-links a {
+  margin-right: 1rem;
+}
