@@ -27,12 +27,6 @@ h2 {
   font-size: 12px;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
 .header-container {
   display: flex;
   align-items: baseline;
